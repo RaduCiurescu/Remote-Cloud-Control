@@ -6,18 +6,15 @@
 #include <WiFiClientSecure.h>
 #include <ESP_Mail_Client.h>
 
-// ââââââââ CONFIG SMTP âââââââââââââââââ
-/* Adresa Åi parola contului de email care va trimite alerta.
-   DacÄ foloseÅti Gmail, genereazÄ un App Password Ã®n contul tÄu Google. */
 const char* SMTP_HOST     = "smtp.gmail.com";
 const int   SMTP_PORT     = 465;
 const char* EMAIL_SENDER  = "raduciurescu75@gmail.com";
-const char* SENDER_PASS   = "fwichghjpegqizph";
+const char* SENDER_PASS   = "";
 const char* EMAIL_RECIPIENT = "podean.beni@gmail.com";
 SMTPSession smtp;
 
-#define DHTPIN 26        // GPIO 4 (poÈi schimba)
-#define DHTTYPE DHT22   // Pentru DHT22
+#define DHTPIN 26      
+#define DHTTYPE DHT22   
 
 DHT dht(DHTPIN, DHTTYPE);
 Preferences prefs;
